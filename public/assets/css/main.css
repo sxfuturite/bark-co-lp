@@ -1,0 +1,367 @@
+/* Local Fonts */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Something Good';
+  src: url('/assets/fonts/SomethingGood.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Brand Colors */
+  --primary-color: #2E2C2D;
+  --secondary-color: #9C845E;
+  --bg-brand: #F2EBE5;
+  --accent-blue: #4869A3;
+  --accent-green: #4D967C;
+  --white: #FFFFFF;
+
+  /* Bootstrap Override Variables */
+  --bs-primary: #2E2C2D;
+  --bs-secondary: #9C845E;
+  --bs-info: #4869A3;
+  --bs-success: #4D967C;
+  --bs-light: #F2EBE5;
+  --bs-dark: #2E2C2D;
+  --bs-body-bg: #F2EBE5;
+  --bs-body-color: #2E2C2D;
+  --bs-font-sans-serif: 'Plus Jakarta Sans', sans-serif;
+  --bs-link-color: #9C845E;
+  --bs-link-hover-color: #7A674A;
+  
+  /* Typography Variables */
+  --font-primary: 'Plus Jakarta Sans', sans-serif;
+  --font-decorative: 'Something Good', 'Comic Sans MS', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-brand);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Classes */
+.font-decorative {
+  font-family: var(--font-decorative);
+  font-weight: normal !important;
+}
+
+
+
+/* Boutique Buttons */
+.btn {
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #403D3E;
+  border-color: #403D3E;
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #857050;
+  border-color: #857050;
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Header Transitions & Styles */
+#main-header {
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  background-color: transparent;
+}
+
+/* Base link colors for transparent state (assuming dark hero background) */
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: var(--white) !important;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--bg-brand);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 130px; /* Space for the floating header logo on mobile */
+  padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+}
+
+.hero-title {
+  font-size: 2rem;
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+.btn-hero {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  white-space: normal;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn-hero {
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+  }
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../img/perro_03.png');
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Light Outline Button */
+.btn-outline-light {
+  border: 2px solid var(--white);
+  color: var(--white);
+  background-color: transparent;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  background-color: var(--white);
+  color: var(--primary-color) !important;
+  transform: translateY(-2px);
+}
+
+/* Custom Booking Form Styles */
+.form-control:focus {
+  background-color: #fff;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(156, 132, 94, 0.25);
+}
+
+.btn-accent-green {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--white);
+}
+
+.btn-accent-green:hover,
+.btn-accent-green:focus {
+  background-color: #3b7561; /* Darker shade of accent green */
+  border-color: #3b7561;
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-accent-blue {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.btn-outline-accent-blue:hover,
+.btn-check:checked + .btn-outline-accent-blue {
+  background-color: var(--accent-blue);
+  color: var(--white);
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+.btn-check:checked + .btn-outline-secondary,
+.btn-check:checked + .btn-outline-primary {
+  transform: translateY(-2px);
+}
+
+/* Custom Accordion Styles (FAQ) */
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--secondary-color) !important;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border-color: rgba(156, 132, 94, 0.2);
+}
+
+/* Minimalist Contact Form */
+.minimal-form .form-control::placeholder {
+  color: rgba(242, 235, 229, 0.5);
+}
+
+.minimal-form .form-control:focus {
+  background-color: transparent !important;
+  color: var(--white) !important;
+  border-color: var(--secondary-color) !important;
+  box-shadow: none;
+}
+
+/* --- Premium Aesthetics & Animations --- */
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 32px 0 rgba(46, 44, 45, 0.08) !important;
+}
+
+/* Premium Card Hover */
+.card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 20px 40px rgba(156, 132, 94, 0.15) !important;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0.15em; /* Fix para evitar que letras como 'g' o 'y' se corten */
+  line-height: 1.2;
+}
+
+/* Enhanced Buttons with Sweep Animation */
+.btn {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: translateX(-100%);
+}
+
+.btn:hover::after {
+  transform: translateX(100%);
+}
+
+/* Service Icons micro-animations */
+.service-icon-container {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card:hover .service-icon-container {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Section transitions */
+section {
+  position: relative;
+  z-index: 1;
+}
