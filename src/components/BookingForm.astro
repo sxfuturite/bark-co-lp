@@ -6,7 +6,7 @@
             <div class="col-lg-10 col-xl-8">
                 <div class="card border-0 shadow-lg" style="border-radius: 1.5rem; overflow: hidden;">
                     <div class="card-body p-4 p-md-5 bg-white">
-                        <h3 class="text-center fw-bold mb-4" style="color: var(--primary-color); font-size: 2.3rem;">Empecemos a planear sus vacaciones</h3>
+                        <h3 class="text-center fw-bold mb-4" style="color: var(--primary-color); font-size: 2.5rem;">Planea su estancia ideal</h3>
                         <form id="realBookingForm" class="booking-form">
                             <input type="hidden" name="servicio" value="Hospedaje">
 
@@ -22,28 +22,9 @@
                                 </div>
                             </div>
 
-                            <!-- Sección 2: Información de Mascotas -->
-                            <div class="mb-4 pb-3 border-bottom">
-                                <label class="form-label fw-semibold mb-3" style="color: var(--secondary-color);">2. Datos de tus mascotas</label>
-                                <div class="row g-3">
-                                    <div class="col-md-4">
-                                        <label for="cant-mascotas" class="form-label small fw-semibold text-muted mb-2">¿Cuántas mascotas?</label>
-                                        <select class="form-select rounded-pill px-4 py-3 bg-light border-0" id="cant-mascotas" name="cantidad_mascotas" style="cursor: pointer;">
-                                            <option value="1" selected>1 mascota</option>
-                                            <option value="2">2 mascotas</option>
-                                            <option value="3+">3 o más mascotas</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <label for="info-mascotas" class="form-label small fw-semibold text-muted mb-2">Cuéntanos sobre tu(s) mascota(s): nombre(s), tamaño(s)</label>
-                                        <input type="text" class="form-control rounded-pill px-4 py-3 bg-light border-0" id="info-mascotas" placeholder="Ej. Toby (Mediano), Luna (Chica)" name="info_mascotas" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sección 3: Datos de Contacto -->
-                            <div class="mb-4 pb-2">
-                                <label class="form-label fw-semibold mb-3" style="color: var(--secondary-color);">3. Tus datos de contacto</label>
+                            <!-- Sección 2: Datos de Contacto -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold mb-3" style="color: var(--secondary-color);">2. Tus datos de contacto</label>
                                 <div class="row g-3">
                                     <div class="col-md-12 mb-2">
                                         <input type="text" class="form-control rounded-pill px-4 py-3 bg-light border-0" placeholder="Nombre completo" name="nombre" required>
@@ -57,16 +38,10 @@
                                 </div>
                             </div>
 
-                            <!-- Toggle de Interés -->
-                            <div class="form-check form-switch d-flex align-items-center justify-content-center gap-3 py-2 my-4">
-                                <input class="form-check-input" type="checkbox" role="switch" id="experiencia-completa" name="experiencia_completa" checked style="width: 2.5em; height: 1.25em; cursor: pointer; border-color: rgba(156, 132, 94, 0.3);">
-                                <label class="form-check-label fw-semibold text-dark mb-0" for="experiencia-completa" style="cursor: pointer;">Quiero conocer la experiencia completa de Bark & Co.</label>
-                            </div>
-
                             <!-- Botón de acción -->
-                            <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-accent-green btn-lg px-5 py-3 w-100 fs-5 fw-bold shadow-sm">Me interesa reservar</button>
-                                <p class="text-center text-muted small mt-3 mb-0" style="max-width: 550px; margin-left: auto; margin-right: auto; line-height: 1.45;">Te contactaremos personalmente en menos de 24 horas para validar disponibilidad de acuerdo a tus necesidades y coordinar todos los detalles.</p>
+                            <div class="text-center mt-5">
+                                <button type="submit" class="btn btn-accent-green btn-lg px-5 py-3 w-100 fs-5 fw-bold shadow-sm">Quiero apartar mi lugar</button>
+                                <p class="text-center text-muted small mt-3 mb-0">Te contactaremos por WhatsApp en menos de 24 horas para coordinar los detalles.</p>
                             </div>
 
                         </form>
@@ -101,10 +76,9 @@
                 }
                 
                 data.origen = "https://bark-co-lp.vercel.app/";
-                data.experiencia_completa = form.querySelector('#experiencia-completa').checked;
                 
                 const btn = form.querySelector('button[type="submit"]');
-                const originalText = btn ? btn.textContent : 'Me interesa reservar';
+                const originalText = btn ? btn.textContent : 'Quiero apartar mi lugar';
                 
                 if (btn) {
                     btn.textContent = 'Enviando...';

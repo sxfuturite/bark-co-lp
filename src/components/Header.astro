@@ -1,21 +1,21 @@
 ---
 ---
 <header class="position-absolute w-100 transition-all z-3" id="main-header" style="animation: fadeInDown 0.8s ease-out;">
-    <div class="container py-2 py-md-3">
+    <div class="container">
         <style>
             @keyframes fadeInDown {
                 from { opacity: 0; transform: translateY(-20px); }
                 to { opacity: 1; transform: translateY(0); }
             }
             .brand-logo { 
-                height: 50px; 
+                height: 60px; 
                 width: auto; 
                 transition: transform 0.4s ease, filter 0.4s ease;
                 filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
             }
             @media (min-width: 768px) {
                 .brand-logo {
-                    height: 75px;
+                    height: 90px;
                 }
             }
             .brand-logo:hover {
@@ -23,88 +23,20 @@
                 filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1));
             }
             #main-navbar {
-                padding-top: 0.5rem !important;
+                padding-top: 1rem !important;
                 padding-bottom: 0.5rem !important;
             }
-            .nav-link {
-                color: var(--primary-color) !important;
-                font-size: 0.95rem;
-                position: relative;
-                transition: color 0.3s ease;
-            }
-            .nav-link:hover {
-                color: var(--secondary-color) !important;
-            }
-            .nav-link::after {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 2px;
-                bottom: -2px;
-                left: 50%;
-                background-color: var(--primary-color);
-                transition: all 0.3s ease;
-                transform: translateX(-50%);
-            }
-            .nav-link.active::after,
-            .nav-link:hover::after {
-                width: 70%;
-            }
-            
-            /* Styles for mobile navbar menu */
-            @media (max-width: 991px) {
-                .navbar-collapse {
-                    background: rgba(242, 235, 229, 0.95);
-                    backdrop-filter: blur(10px);
-                    border-radius: 1rem;
-                    padding: 1.5rem;
-                    margin-top: 1rem;
-                    box-shadow: 0 10px 30px rgba(46, 44, 45, 0.1);
-                    border: 1px solid rgba(156, 132, 94, 0.1);
+            @media (min-width: 768px) {
+                #main-navbar {
+                    padding-top: 2rem !important;
+                    padding-bottom: 1rem !important;
                 }
             }
-            .whatsapp-header-link {
-                transition: transform 0.3s ease;
-                font-size: 0.95rem;
-            }
-            .whatsapp-header-link:hover {
-                transform: translateY(-2px);
-                color: #128c7e !important;
-            }
         </style>
-        <nav class="navbar navbar-expand-lg navbar-light px-0" id="main-navbar">
-            <div class="container-fluid px-0 d-flex justify-content-between align-items-center">
-                <a class="navbar-brand p-0 m-0" href="/">
-                    <img src="/assets/img/logo_BarknCo.png" alt="Bark & Co." class="brand-logo">
-                </a>
-                
-                <button class="navbar-toggler border-0 p-2 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
-                    <ul class="navbar-nav align-items-center gap-2 gap-lg-3 me-lg-4 mb-3 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active fw-bold px-2 py-1" href="#hero">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold px-2 py-1" href="#servicios">Instalaciones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold px-2 py-1" href="#tarifas">Precios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold px-2 py-1" href="#filosofia">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold px-2 py-1" href="#faq">FAQ</a>
-                        </li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#booking" class="btn btn-accent-green px-4 py-2 text-white fw-bold shadow-sm">Reserva ahora</a>
-                    </div>
-                </div>
-            </div>
+        <nav class="navbar justify-content-center" id="main-navbar">
+            <a class="navbar-brand p-2 m-0" href="/">
+                <img src="/assets/img/logo_BarknCo.png" alt="Bark & Co." class="brand-logo">
+            </a>
         </nav>
     </div>
 </header>
