@@ -164,30 +164,30 @@ body {
 }
 
 .hero-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 360px) {
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 2.1rem;
   }
 }
 
 @media (min-width: 576px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
   }
 }
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 }
 
 @media (min-width: 992px) {
   .hero-title {
-    font-size: 4rem;
+    font-size: 5.2rem;
   }
 }
 

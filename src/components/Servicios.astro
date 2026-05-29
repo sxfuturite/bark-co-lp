@@ -4,15 +4,16 @@
 
 <section id="servicios" class="py-5" style="background-color: var(--bg-brand);">
     <div class="container">
-        <h2 class="text-center mb-4 font-decorative text-gradient" style="font-size: 2.8rem;">Hospedaje Canino de Primer Nivel</h2>
+        <h2 class="text-center mb-4 font-decorative text-gradient servicios-title">Hospedaje Canino de Primer Nivel</h2>
         <p class="text-center mx-auto mb-5 text-muted lead" style="max-width: 750px; color: var(--primary-color);">
             Para brindarte una cotización exacta y a la medida es indispensable conocer a tu perrito en persona para evaluar su tamaño y temperamento. A continuación te compartimos una referencia general de nuestras tarifas de hospedaje.
         </p>
 
-        <!-- Tarjeta de Tarifa de Hospedaje en Verde -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6 col-lg-5 col-xl-4">
-                <div class="card h-100 pricing-card">
+        <!-- Tarjeta de Tarifa de Hospedaje en Verde y Foto -->
+        <div class="row align-items-stretch justify-content-center mt-5 g-4">
+            <!-- Left Side: Pricing Card -->
+            <div class="col-lg-6 col-xl-5 d-flex">
+                <div class="card h-100 pricing-card w-100">
                     <div class="text-center pt-4 pb-2">
                         <span class="text-muted small fw-bold text-uppercase" style="letter-spacing: 0.1rem;">HOTEL CANINO</span>
                         <h4 class="fw-bold mt-1 mb-0" style="color: var(--primary-color); font-size: 1.4rem;">Hospedaje</h4>
@@ -70,11 +71,29 @@
                     </div>
                 </div>
             </div>
+            <!-- Right Side: Photo -->
+            <div class="col-lg-6 col-xl-6 offset-xl-1 d-flex">
+                <img src="/assets/img/perro_descansando.jpeg" alt="Perro feliz descansando en Bark & Co." class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; min-height: 400px; aspect-ratio: 4 / 3;" />
+            </div>
         </div>
     </div>
 </section>
 
 <style>
+    .servicios-title {
+        font-size: 2.4rem;
+    }
+    @media (min-width: 768px) {
+        .servicios-title {
+            font-size: 3.2rem;
+        }
+    }
+    @media (min-width: 992px) {
+        .servicios-title {
+            font-size: 3.8rem;
+        }
+    }
+
     .pricing-card {
         position: relative;
         background-color: var(--white);

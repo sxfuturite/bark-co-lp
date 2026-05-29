@@ -1,16 +1,26 @@
 ---
+
 ---
+
 <header class="fixed-top bg-white shadow-sm w-100 transition-all" id="main-header" style="animation: fadeInDown 0.8s ease-out; z-index: 1050;">
     <div class="container">
         <style>
             @keyframes fadeInDown {
-                from { opacity: 0; transform: translateY(-20px); }
-                to { opacity: 1; transform: translateY(0); }
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
-            .brand-logo { 
-                height: 45px; 
-                width: auto; 
-                transition: transform 0.4s ease, filter 0.4s ease;
+            .brand-logo {
+                height: 45px;
+                width: auto;
+                transition:
+                    transform 0.4s ease,
+                    filter 0.4s ease;
             }
             @media (min-width: 992px) {
                 .brand-logo {
@@ -48,20 +58,20 @@
         </style>
         <nav class="navbar navbar-expand-lg navbar-light p-0" id="main-navbar">
             <a class="navbar-brand d-flex align-items-center m-0" href="#hero">
-                <img src="/assets/img/logo_BarknCo.png" alt="Bark & Co." class="brand-logo">
+                <img src="/assets/img/logo_BarknCo.png" alt="Bark & Co." class="brand-logo" />
             </a>
-            
+
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse justify-content-end" id="mainNavbarCollapse">
                 <ul class="navbar-nav align-items-center me-lg-4 mb-3 mb-lg-0 mt-3 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link px-3 fw-semibold" href="#hero">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3 fw-semibold" href="#servicios">Servicios</a>
+                        <a class="nav-link px-3 fw-semibold" href="#servicios">Hospedaje</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3 fw-semibold" href="#filosofia">Filosofía</a>
@@ -80,20 +90,20 @@
 
 <script is:inline>
     document.addEventListener('DOMContentLoaded', () => {
-        const navLinks = document.querySelectorAll('#mainNavbarCollapse .nav-link, #mainNavbarCollapse .btn');
-        const menuToggle = document.getElementById('mainNavbarCollapse');
+        const navLinks = document.querySelectorAll('#mainNavbarCollapse .nav-link, #mainNavbarCollapse .btn')
+        const menuToggle = document.getElementById('mainNavbarCollapse')
         if (navLinks && menuToggle) {
             navLinks.forEach((link) => {
                 link.addEventListener('click', () => {
                     // Cierra el menú en móviles después de hacer click
                     if (window.bootstrap && window.bootstrap.Collapse) {
-                        const bsCollapse = window.bootstrap.Collapse.getInstance(menuToggle);
+                        const bsCollapse = window.bootstrap.Collapse.getInstance(menuToggle)
                         if (bsCollapse) {
-                            bsCollapse.hide();
+                            bsCollapse.hide()
                         }
                     }
-                });
-            });
+                })
+            })
         }
-    });
+    })
 </script>
