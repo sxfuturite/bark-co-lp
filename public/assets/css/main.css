@@ -44,7 +44,7 @@
   --bs-font-sans-serif: 'Plus Jakarta Sans', sans-serif;
   --bs-link-color: #9C845E;
   --bs-link-hover-color: #7A674A;
-  
+
   /* Typography Variables */
   --font-primary: 'Plus Jakarta Sans', sans-serif;
   --font-decorative: 'Something Good', 'Comic Sans MS', sans-serif;
@@ -152,7 +152,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 130px; /* Space for the floating header logo on mobile */
+  padding-top: 130px;
+  /* Space for the floating header logo on mobile */
   padding-bottom: 60px;
 }
 
@@ -164,7 +165,7 @@ body {
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
 }
 
 @media (max-width: 360px) {
@@ -175,25 +176,25 @@ body {
 
 @media (min-width: 576px) {
   .hero-title {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
   }
 }
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 4.5rem;
+    font-size: 4.6rem;
   }
 }
 
 @media (min-width: 992px) {
   .hero-title {
-    font-size: 5.2rem;
+    font-size: 5.3rem;
   }
 }
 
 .btn-hero {
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   white-space: normal;
   max-width: 100%;
 }
@@ -201,14 +202,17 @@ body {
 @media (min-width: 768px) {
   .btn-hero {
     font-size: 1.25rem;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
   }
 }
 
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('../img/perro_03.png');
   background-size: contain;
   background-position: bottom right;
@@ -246,7 +250,8 @@ body {
 
 .btn-accent-green:hover,
 .btn-accent-green:focus {
-  background-color: #3b7561; /* Darker shade of accent green */
+  background-color: #3b7561;
+  /* Darker shade of accent green */
   border-color: #3b7561;
   color: var(--white);
   transform: translateY(-2px);
@@ -258,15 +263,15 @@ body {
 }
 
 .btn-outline-accent-blue:hover,
-.btn-check:checked + .btn-outline-accent-blue {
+.btn-check:checked+.btn-outline-accent-blue {
   background-color: var(--accent-blue);
   color: var(--white);
   border-color: var(--accent-blue);
   transform: translateY(-2px);
 }
 
-.btn-check:checked + .btn-outline-secondary,
-.btn-check:checked + .btn-outline-primary {
+.btn-check:checked+.btn-outline-secondary,
+.btn-check:checked+.btn-outline-primary {
   transform: translateY(-2px);
 }
 
@@ -325,13 +330,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding-bottom: 0.15em; /* Fix para evitar que letras como 'g' o 'y' se corten */
+  padding-bottom: 0.15em;
+  /* Fix para evitar que letras como 'g' o 'y' se corten */
   line-height: 1.2;
 }
 
 /* Enhanced Buttons with Sweep Animation */
 .btn {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -340,8 +346,11 @@ body {
 .btn::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
   z-index: -1;
   transition: transform 0.5s ease;
   transform: translateX(-100%);
