@@ -7,10 +7,10 @@
     <div class="container-fluid px-0 position-relative z-1">
         <div class="row g-0 align-items-center">
             <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                <div class="hero-content-wrapper text-center text-lg-start px-1 py-1 py-lg-5">
-                    <h1 class="hero-title mb-4 lh-1 font-decorative text-gradient">HOSPEDAJE CANINO<br />EN SAN PEDRO</h1>
-                    <p class="lead mb-4 fs-5" style="color: var(--primary-color);">Tus vacaciones empiezan cuando dejas a tu perro con nosotros. Las de tu perro, cuando entra a Bark & Co.</p>
-                    <p class="lead my-5 fs-4" style="color: var(--primary-color);">¡Cupos limitados para este verano!</p>
+                <div class="hero-content-wrapper text-center text-lg-start py-1 py-lg-5">
+                    <h1 class="hero-title mb-3 font-decorative text-gradient">HOSPEDAJE CANINO<br />EN SAN PEDRO</h1>
+                    <p class="lead mb-3 fs-5" style="color: var(--primary-color);">Tus vacaciones empiezan cuando dejas a tu perro con nosotros. Las de tu perro, cuando entra a Bark & Co.</p>
+                    <p class="lead mb-4 fs-4" style="color: var(--primary-color);">¡Cupos limitados para este verano!</p>
                     <div class="d-flex justify-content-center justify-content-lg-start">
                         <a href="#booking" class="btn btn-accent-green btn-hero fw-bold shadow-sm">Reserva su lugar para verano →</a>
                     </div>
@@ -30,7 +30,7 @@
         display: none !important;
     }
     .hero-section {
-        padding-top: 95px !important; /* Espacio para barra de navegación en móviles */
+        padding-top: 10px !important; /* Espacio para barra de navegación en móviles */
         padding-bottom: 60px !important;
         min-height: 100vh;
     }
@@ -52,6 +52,28 @@
     }
     .hero-content-wrapper {
         width: 100%;
-        max-width: 580px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    @media (min-width: 1700px) {
+        .hero-content-wrapper {
+            padding-left: 12%;
+            padding-right: 12%;
+        }
+    }
+
+    .hero-title {
+        line-height: 0.85 !important;
+    }
+    .btn-hero {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 1.1rem !important;
+    }
+    @media (min-width: 768px) {
+        .btn-hero {
+            font-size: 1rem !important;
+            padding: 0.8rem 1.6rem !important;
+        }
     }
 </style>

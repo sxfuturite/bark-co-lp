@@ -5,15 +5,15 @@
 <section id="servicios" class="py-5" style="background-color: var(--bg-brand);">
     <div class="container">
         <h2 class="text-center mb-4 font-decorative text-gradient servicios-title">Hospedaje Canino de Primer Nivel</h2>
-        <p class="text-center mx-auto mb-5 text-muted lead" style="max-width: 750px; color: var(--primary-color);">
+        <p class="text-center mx-auto mb-3 text-muted px-4 px-md-0 lead servicios-lead" style="max-width: 750px; color: var(--primary-color);">
             Para brindarte una cotización exacta y a la medida es indispensable conocer a tu perrito en persona para evaluar su tamaño y temperamento. A continuación te compartimos una referencia general de nuestras tarifas de hospedaje.
         </p>
 
         <!-- Tarjeta de Tarifa de Hospedaje en Verde y Foto -->
-        <div class="row align-items-stretch justify-content-center mt-5 g-4">
+        <div class="row align-items-stretch justify-content-between mt-3 g-4">
             <!-- Left Side: Pricing Card -->
-            <div class="col-lg-6 col-xl-5 d-flex">
-                <div class="card h-100 pricing-card w-100">
+            <div class="col-lg-5 col-md-5 d-flex flex-column">
+                <div class="card h-100 pricing-card">
                     <div class="text-center pt-4 pb-2">
                         <span class="text-muted small fw-bold text-uppercase" style="letter-spacing: 0.1rem;">HOTEL CANINO</span>
                         <h4 class="fw-bold mt-1 mb-0" style="color: var(--primary-color); font-size: 1.4rem;">Hospedaje</h4>
@@ -72,14 +72,21 @@
                 </div>
             </div>
             <!-- Right Side: Photo -->
-            <div class="col-lg-6 col-xl-6 offset-xl-1 d-flex">
-                <img src="/assets/img/perro_descansando.jpeg" alt="Perro feliz descansando en Bark & Co." class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; min-height: 400px; aspect-ratio: 4 / 3;" />
+            <div class="col-lg-5 col-md-5 d-flex flex-column">
+                <img src="/assets/img/perro_descansando.jpeg" alt="Perro feliz descansando en Bark & Co." class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; aspect-ratio: 1 / 1;" />
             </div>
         </div>
     </div>
 </section>
 
 <style>
+    @media (max-width: 991px) {
+        .servicios-lead {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+    }
+
     .servicios-title {
         font-size: 2.4rem;
     }
@@ -96,6 +103,7 @@
 
     .pricing-card {
         position: relative;
+        margin-left: 21px;
         background-color: var(--white);
         border: 1px solid rgba(156, 132, 94, 0.15) !important;
         border-radius: 1.5rem;
@@ -104,6 +112,12 @@
         transition:
             transform 0.3s ease,
             box-shadow 0.3s ease;
+    }
+
+    @media (max-width: 767px) {
+        .pricing-card {
+            margin-right: 21px;
+        }
     }
 
     .pricing-card:hover {

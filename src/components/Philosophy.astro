@@ -15,14 +15,14 @@
             <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
                 <img src="/assets/img/perro_indoor.jpeg" alt="Cuidado compasivo en Bark & Co." class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; aspect-ratio: 1 / 1;" />
             </div>
-            <div class="col-lg-6 ps-lg-4">
+            <div class="col-lg-6 px-4 px-lg-5 philosophy-text">
                 <!-- Content Paragraphs -->
-                <p class="mb-3 lead" style="color: var(--primary-color); line-height: 1.8;">En Bark & Co. creemos que un perro feliz también necesita sentirse seguro, tranquilo y emocionalmente cuidado.</p>
-                <p class="mb-3 lead" style="color: var(--primary-color); line-height: 1.8;">
+                <p class="mb-5 lead" style="color: var(--primary-color); line-height: 1.8; text-wrap: pretty;">En Bark & Co. creemos que un perro feliz también necesita sentirse seguro, tranquilo y emocionalmente cuidado.</p>
+                <p class="mb-3 lead" style="color: var(--primary-color); line-height: 1.8; text-wrap: pretty;">
                     Por eso, cada detalle de nuestra experiencia está diseñado para reducir el estrés y la ansiedad: desde la forma en que interactuamos con cada perro, hasta nuestros espacios, rutinas de paseo, actividades y protocolos de socialización canina.
                 </p>
-                <p class="mb-3 lead" style="color: var(--primary-color); line-height: 1.8;">Aquí, tu perro no pasa el día bajo estrés o aislado en una jaula. Juega, explora, descansa y convive en un ambiente diseñado para promover calma, confianza y bienestar.</p>
-                <p class="mb-0 lead" style="color: var(--primary-color); line-height: 1.8;">Porque el verdadero cuidado no solo protege su salud física. También protege su tranquilidad emocional.</p>
+                <p class="mb-3 lead" style="color: var(--primary-color); line-height: 1.8; text-wrap: pretty;">Aquí, tu perro no pasa el día bajo estrés o aislado en una jaula. Juega, explora, descansa y convive en un ambiente diseñado para promover calma, confianza y bienestar.</p>
+                <p class="mb-0 lead" style="color: var(--primary-color); line-height: 1.8; text-wrap: pretty;">Porque el verdadero cuidado no solo protege su salud física. También protege su tranquilidad emocional.</p>
             </div>
         </div>
 
@@ -212,16 +212,53 @@
 </section>
 
 <style>
+    @media (max-width: 991px) {
+        .philosophy-text p {
+            font-size: 1rem !important;
+        }
+    }
+
+    .philosophy-marquee-item .card {
+        position: relative;
+        overflow: hidden !important;
+        padding: 1.5rem 1rem !important;
+    }
+
+    .philosophy-marquee-item h4 {
+        font-size: 1.15rem !important;
+    }
+
+    .philosophy-marquee-item p {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .philosophy-marquee-item .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/assets/img/bg_perritos.png');
+        background-size: 500px; /* Zoom out */
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.1; /* Reducir opacidad */
+        filter: blur(0.2px); /* Agregar blur */
+        z-index: -1;
+    }
+
     .philosophy-marquee-container {
         overflow: hidden;
         width: 100%;
         position: relative;
         padding: 20px 0;
     }
-    
+
     .philosophy-marquee-container::before,
     .philosophy-marquee-container::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         width: 80px;
@@ -229,17 +266,17 @@
         z-index: 2;
         pointer-events: none;
     }
-    
+
     .philosophy-marquee-container::before {
         left: 0;
         background: linear-gradient(to right, var(--bg-brand) 0%, rgba(242, 235, 229, 0) 100%);
     }
-    
+
     .philosophy-marquee-container::after {
         right: 0;
         background: linear-gradient(to left, var(--bg-brand) 0%, rgba(242, 235, 229, 0) 100%);
     }
-    
+
     .philosophy-marquee-track {
         display: flex !important;
         flex-direction: row !important;
@@ -247,18 +284,18 @@
         width: max-content;
         animation: scrollMarquee 28s linear infinite;
     }
-    
+
     .philosophy-marquee-track:hover {
         animation-play-state: paused;
     }
-    
+
     .philosophy-marquee-item {
-        flex: 0 0 320px !important;
-        width: 320px !important;
+        flex: 0 0 280px !important;
+        width: 280px !important;
         flex-shrink: 0 !important;
-        margin: 0 15px;
+        margin: 0 12px;
     }
-    
+
     @keyframes scrollMarquee {
         0% {
             transform: translateX(0);

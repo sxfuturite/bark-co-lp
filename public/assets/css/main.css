@@ -165,12 +165,12 @@ body {
 }
 
 .hero-title {
-  font-size: 2.6rem;
+  font-size: 2.9rem;
 }
 
 @media (max-width: 360px) {
   .hero-title {
-    font-size: 2.1rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -189,6 +189,12 @@ body {
 @media (min-width: 992px) {
   .hero-title {
     font-size: 5.3rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .hero-title {
+    font-size: 6.2rem;
   }
 }
 
@@ -330,9 +336,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding-bottom: 0.15em;
-  /* Fix para evitar que letras como 'g' o 'y' se corten */
-  line-height: 1.2;
+  line-height: 0.8;
 }
 
 /* Enhanced Buttons with Sweep Animation */
