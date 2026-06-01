@@ -1,47 +1,50 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
     console.log("Bark & Co. Website Initialized.");
 
     /* =========================================
-       1. HEADER SCROLL LOGIC
+       1. FORM VALIDATIONS
        ========================================= */
-    // Scroll logic removed as per request to keep header transparent
-
+    // Booking form is handled natively via API request in BookingForm.astro
+    // Contact form is handled natively via API request in Footer.astro
 
     /* =========================================
-       2. GLIDE.JS INITIALIZATION (MOBILE SLIDER PREPARATION)
+       2. CONTROL DE PALABRAS HUÉRFANAS (ORPHAN CONTROL)
        ========================================= */
-    // Prepared logic to initialize Glide.js for the 'Cómo lo logramos' section 
-    // when it has the corresponding HTML wrapper (.glide).
-    // It only triggers on mobile screens.
-    if ($('.glide-how-we-achieve').length) {
-        let glideInst = null;
+    function preventOrphans() {
+        const words = ['a', 'para', 'y', 'en', 'de', 'con', 'tu', 'tus', 'te', 'o', 'u', 'e', 'del', 'al'];
+        const regex = new RegExp('\\b(' + words.join('|') + ')\\b\\s+', 'gi');
 
-        function initGlide() {
-            if (window.innerWidth < 768 && !glideInst) {
-                glideInst = new Glide('.glide-how-we-achieve', {
-                    type: 'carousel',
-                    perView: 1,
-                    gap: 20,
-                    autoplay: 3000,
-                    hoverpause: true,
-                    animationDuration: 800
-                }).mount();
-            } else if (window.innerWidth >= 768 && glideInst) {
-                glideInst.destroy();
-                glideInst = null;
+        function processNode(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                let text = node.textContent;
+                
+                // 1. Reemplazar espacios regulares tras palabras cortas
+                let newText = text.replace(regex, '$1\u00A0');
+                
+                // 2. Controlar la última palabra (evitar viudas/huérfanas al final del párrafo)
+                const wordsArray = newText.trim().split(/\s+/);
+                if (wordsArray.length > 2) {
+                    const lastSpaceIndex = newText.lastIndexOf(' ');
+                    if (lastSpaceIndex !== -1) {
+                        newText = newText.substring(0, lastSpaceIndex) + '\u00A0' + newText.substring(lastSpaceIndex + 1);
+                    }
+                }
+                
+                if (node.textContent !== newText) {
+                    node.textContent = newText;
+                }
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                const tag = node.tagName.toLowerCase();
+                if (tag !== 'script' && tag !== 'style' && tag !== 'input' && tag !== 'textarea' && tag !== 'select') {
+                    for (let i = 0; i < node.childNodes.length; i++) {
+                        processNode(node.childNodes[i]);
+                    }
+                }
             }
         }
 
-        // Initialize on load and listen to window resize
-        initGlide();
-        $(window).on('resize', initGlide);
+        processNode(document.body);
     }
 
-    /* =========================================
-       3. FORM VALIDATIONS
-       ========================================= */
-    
-    // Booking form is handled natively via API request in BookingForm.astro
-
-    // Contact form is handled natively via API request in Footer.astro
+    preventOrphans();
 });
