@@ -21,16 +21,16 @@ const experts = [
 ];
 ---
 
-<section id="expertos" class="py-5" style="background-color: var(--bg-brand); position: relative; overflow: hidden;">
-    <div class="container py-4 relative-content">
+<section id="expertos" class="py-5" style="position: relative; overflow: hidden;">
+    <div class="container relative-content">
         <div class="text-center mb-5">
-            <h2 class="font-decorative text-gradient mb-3 experts-title">La voz de los expertos</h2>
-            <p class="mx-auto text-muted lead px-4 px-md-0 experts-subtitle" style="max-width: 680px; color: var(--primary-color);">
+            <h2 class="section-title text-center mb-4">La voz de los expertos</h2>
+            <p class="section-subtitle mx-auto text-center px-4 px-md-0" style="max-width: 700px;">
                 Veterinarios y especialistas en comportamiento canino avalan nuestro modelo Stress & Fear Free.
             </p>
         </div>
 
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center mt-3" style="padding-bottom: 25px;">
             {experts.map((expert) => (
                 <div class="col-lg-4 col-md-6 d-flex">
                     <div class="card w-100 border-0 glass-card p-4 d-flex flex-column justify-content-between testimonial-card" style="border-radius: 1.5rem;">
@@ -42,7 +42,7 @@ const experts = [
                                 </svg>
                             </div>
                             <!-- Testimonial Text -->
-                            <p class="card-text text-muted mb-0 font-italic" style="font-size: 1.05rem; line-height: 1.7; font-style: italic;">
+                            <p class="card-text text-muted mb-0 font-italic fs-6" style=" line-height: 1.7; font-style: italic;">
                                 "{expert.quote}"
                             </p>
                         </div>
@@ -75,33 +75,6 @@ const experts = [
         z-index: 2;
     }
 
-    .experts-title {
-        font-size: 2.4rem;
-    }
-
-    @media (min-width: 768px) {
-        .experts-title {
-            font-size: 3.2rem;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .experts-title {
-            font-size: 3.8rem;
-        }
-    }
-
-    .experts-subtitle {
-        font-size: 1.1rem;
-        line-height: 1.6;
-    }
-
-    @media (max-width: 767px) {
-        .experts-subtitle {
-            font-size: 1rem;
-        }
-    }
-
     /* Testimonial Card Customizations */
     .testimonial-card {
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
@@ -122,31 +95,5 @@ const experts = [
 
     .testimonial-card:hover .quote-icon-container {
         transform: scale(1.1) rotate(-5deg);
-    }
-
-    /* Decorative circles for premium layout depth */
-    .decor-circle {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.12;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .decor-circle-1 {
-        top: -10%;
-        left: -10%;
-        width: 300px;
-        height: 300px;
-        background-color: var(--secondary-color);
-    }
-
-    .decor-circle-2 {
-        bottom: -10%;
-        right: -10%;
-        width: 350px;
-        height: 350px;
-        background-color: var(--accent-green);
     }
 </style>
