@@ -1,26 +1,25 @@
 <section id="hero" class="hero-section d-flex align-items-center position-relative overflow-hidden">
-    <!-- Right side image for desktop -->
-    <div class="position-absolute top-0 bottom-0 end-0 w-50 d-none d-lg-block">
-        <img src="/assets/img/hero_perro.jpeg" alt="Perro feliz en Bark & Co." class="hero-dog-img-split" />
-    </div>
-
-    <div class="container-fluid px-0 position-relative z-1">
-        <div class="row g-0 align-items-center">
-            <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                <div class="hero-content-wrapper text-center text-lg-start py-1 py-lg-5">
-                    <h1 class="hero-title mb-3 font-decorative text-gradient">HOSPEDAJE CANINO<br />PREMIUM EN SAN PEDRO</h1>
-                    <p class="lead mb-3 fs-5" style="color: var(--primary-color);">Tus vacaciones empiezan cuando dejas a tu perro con <br /> nosotros. Las de tu perro, cuando entra a Bark & Co.</p>
-                    <p class="lead mb-3 fs-5 fw-semibold" style="color: var(--secondary-color);">El primer wellness center premium para perros en Monterrey.<br />Sin jaulas · Fear Free · Cámara en vivo 24/7</p>
-                    <p class="lead mb-4 fs-4" style="color: var(--primary-color);">¡Cupos limitados para este verano!</p>
+    <div class="z-1">
+        <div class="row align-items-center g-4 ms-0">
+            <!-- Left Column: Content -->
+            <div class="col-lg-6 d-flex justify-content-center align-items-center text-center text-lg-start p-0">
+                <div class="hero-content-wrapper py-1 py-lg-4 px-5">
+                    <h1 class="hero-title mb-3 font-decorative text-gradient">HOTEL CANINO FEAR FREE EN SAN PEDRO</h1>
+                    <p class="lead mb-3 fs-5" style="color: var(--primary-color);">Sabemos que te duele dejarlo cuando viajas. En realidad, dejarlo en Bark & Co. es llevarlo de vacaciones.</p>
+                    <p class="lead mb-3 fs-5" style="color: var(--primary-color);">
+                        Bark & Co. es el Dog Wellness Club donde no sólo cuidamos a tu perro; lo hacemos crecer. Con nosotros tu perro se desarrolla en cuerpo, mente y emoción, y tú perteneces a una comunidad que te hace la vida más fácil y la llena de experiencias inolvidables.
+                    </p>
+                    <p class="lead mb-3 fs-5 fw-semibold" style="color: var(--secondary-color);">Hotel · Guardería Enriquecida · Training · Grooming & Spa · Boutique</p>
+                    <p class="lead mb-4 fs-4" style="color: var(--primary-color);">¡Gran apertura Julio 2026! Cupos limitados</p>
                     <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="#booking" class="btn btn-accent-green btn-hero fw-bold shadow-sm">Reserva su lugar para verano →</a>
+                        <a href="#booking" class="btn btn-accent-green btn-hero fw-bold shadow-sm">Reserva su lugar para este verano</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Mobile dog image -->
-            <div class="col-12 text-center mt-5 d-lg-none px-4">
-                <img src="/assets/img/hero_perro.jpeg" alt="Perro feliz en Bark & Co." class="img-fluid rounded-4 shadow-sm hero-dog-img-mobile" />
+            <!-- Right Column: Image (Desktop & Mobile unified) -->
+            <div class="col-lg-6 p-0 m-0">
+                <img src="/assets/img/hero_perro.jpeg" alt="Perro feliz en Bark & Co." class="hero-dog-img" />
             </div>
         </div>
     </div>
@@ -31,42 +30,58 @@
         display: none !important;
     }
     .hero-section {
-        padding-top: 10px !important; /* Espacio para barra de navegación en móviles */
+        padding-top: 80px !important; /* Reducido para eliminar espacio excesivo */
         padding-bottom: 60px !important;
         min-height: 100vh;
     }
     @media (min-width: 992px) {
         .hero-section {
-            padding-top: 110px !important; /* Espacio para barra de navegación en desktop */
+            padding-top: 80px !important; /* Reducido para eliminar espacio excesivo */
             padding-bottom: 80px !important;
         }
     }
-    .hero-dog-img-split {
+    .hero-dog-img {
         width: 100%;
-        height: 100%;
+        height: auto;
+        /* aspect-ratio: 4 / 3; */
         object-fit: cover;
+        padding-top: 20px !important;
     }
-    .hero-dog-img-mobile {
-        max-width: 100%;
-        max-height: 350px;
-        object-fit: cover;
+    @media (min-width: 992px) {
+        .hero-dog-img {
+            padding-top: 0px !important;
+        }
     }
     .hero-content-wrapper {
         width: 100%;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    @media (min-width: 1700px) {
-        .hero-content-wrapper {
-            padding-left: 12%;
-            padding-right: 12%;
-        }
     }
 
     .hero-title {
-        line-height: 0.85 !important;
+        line-height: 0.95 !important;
+        font-size: 3.4rem !important;
+        font-weight: 800 !important;
     }
+    @media (min-width: 576px) {
+        .hero-title {
+            font-size: 4.2rem !important;
+        }
+    }
+    @media (min-width: 768px) {
+        .hero-title {
+            font-size: 5.2rem !important;
+        }
+    }
+    @media (min-width: 992px) {
+        .hero-title {
+            font-size: 5.8rem !important;
+        }
+    }
+    @media (min-width: 1700px) {
+        .hero-title {
+            font-size: 6.8rem !important;
+        }
+    }
+
     .btn-hero {
         font-size: 0.85rem !important;
         padding: 0.5rem 1.1rem !important;

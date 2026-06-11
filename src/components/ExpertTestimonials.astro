@@ -1,0 +1,156 @@
+---
+const experts = [
+    {
+        name: "Dra. Mariana Gómez",
+        role: "Especialista en Medicina Veterinaria y Bienestar Animal",
+        quote: "El enfoque Fear Free de Bark & Co. no es un lujo, es una necesidad. Minimizar el estrés en el hospedaje previene problemas de salud y asegura que regresen felices.",
+        initials: "MG"
+    },
+    {
+        name: "Carlos Martínez",
+        role: "Educador y Especialista en Comportamiento Canino",
+        quote: "He visto de primera mano cómo los espacios abiertos y las rutinas predecibles transforman la experiencia de los perros. En Bark & Co. entienden de verdad el lenguaje canino.",
+        initials: "CM"
+    },
+    {
+        name: "M.V.Z. Sofía Ruiz",
+        role: "Terapeuta y Rehabilitadora Canina",
+        quote: "Las jaulas generan altos niveles de cortisol. La propuesta de suites de Bark & Co. respeta los ciclos de sueño y descanso de los perritos, promoviendo calma real.",
+        initials: "SR"
+    }
+];
+---
+
+<section id="expertos" class="py-5" style="background: linear-gradient(180deg, var(--bg-brand) 0%, var(--white) 100%); position: relative; overflow: hidden;">
+    <!-- Decorative background elements -->
+    <div class="decor-circle decor-circle-1"></div>
+    <div class="decor-circle decor-circle-2"></div>
+
+    <div class="container py-4 relative-content">
+        <div class="text-center mb-5">
+            <h2 class="font-decorative text-gradient mb-3 experts-title">La voz de los expertos</h2>
+            <p class="mx-auto text-muted lead px-4 px-md-0 experts-subtitle" style="max-width: 680px; color: var(--primary-color);">
+                Veterinarios y especialistas en comportamiento canino avalan nuestro modelo Stress & Fear Free.
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            {experts.map((expert) => (
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="card w-100 border-0 glass-card p-4 d-flex flex-column justify-content-between testimonial-card" style="border-radius: 1.5rem;">
+                        <div class="mb-4">
+                            <!-- Quote Icon -->
+                            <div class="quote-icon-container mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="var(--secondary-color)" class="bi bi-quote" viewBox="0 0 16 16">
+                                    <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-.1-.45l-1.383-2.766A1 1 0 0 0 10.617 5H8.5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1zM5 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-.1-.45L4.517 5.342A1 1 0 0 0 3.617 5H1.5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"/>
+                                </svg>
+                            </div>
+                            <!-- Testimonial Text -->
+                            <p class="card-text text-muted mb-0 font-italic" style="font-size: 1.05rem; line-height: 1.7; font-style: italic;">
+                                "{expert.quote}"
+                            </p>
+                        </div>
+
+                        <!-- Expert Info -->
+                        <div class="d-flex align-items-center mt-auto pt-3 border-top border-light-subtle">
+                            <!-- Circular Initials Avatar -->
+                            <div class="avatar-circle me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--secondary-color) 0%, #857050 100%); color: var(--white); border-radius: 50%; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px;">
+                                {expert.initials}
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1" style="color: var(--primary-color); font-size: 1.1rem;">
+                                    {expert.name}
+                                </h5>
+                                <p class="text-muted mb-0 small" style="line-height: 1.3;">
+                                    {expert.role}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .relative-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .experts-title {
+        font-size: 2.4rem;
+    }
+
+    @media (min-width: 768px) {
+        .experts-title {
+            font-size: 3.2rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .experts-title {
+            font-size: 3.8rem;
+        }
+    }
+
+    .experts-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 767px) {
+        .experts-subtitle {
+            font-size: 1rem;
+        }
+    }
+
+    /* Testimonial Card Customizations */
+    .testimonial-card {
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
+        background: rgba(255, 255, 255, 0.65) !important;
+        border: 1px solid rgba(156, 132, 94, 0.1) !important;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-8px) scale(1.02) !important;
+        box-shadow: 0 20px 40px rgba(156, 132, 94, 0.12) !important;
+        background: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    .quote-icon-container {
+        opacity: 0.8;
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover .quote-icon-container {
+        transform: scale(1.1) rotate(-5deg);
+    }
+
+    /* Decorative circles for premium layout depth */
+    .decor-circle {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.12;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .decor-circle-1 {
+        top: -10%;
+        left: -10%;
+        width: 300px;
+        height: 300px;
+        background-color: var(--secondary-color);
+    }
+
+    .decor-circle-2 {
+        bottom: -10%;
+        right: -10%;
+        width: 350px;
+        height: 350px;
+        background-color: var(--accent-green);
+    }
+</style>
